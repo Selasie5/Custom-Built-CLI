@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 //Hashabang directive stating the interpreter we are using
-const arg = require('arg');
+import arg from 'arg'
+import chalk from 'chalk'
 
 try {
     const args = arg({
@@ -9,11 +10,11 @@ try {
     })
     
     if(args['--start']){
-        console.log('Starting the application')
+        console.log(chalk.bgCyanBright('Starting the application'))
     }
     console.log(process.argv)
 } catch (error) {
-    console.log(error.message);
+    console.log(chalk.yellow(error.message));
     console.log();
     usage()
 }

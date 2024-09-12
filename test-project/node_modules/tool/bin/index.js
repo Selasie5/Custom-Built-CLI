@@ -13,5 +13,15 @@ try {
     }
     console.log(process.argv)
 } catch (error) {
-    console.log(error.message)
+    console.log(error.message);
+    console.log();
+    usage()
+}
+
+function usage(){
+    console.log(`
+        tool[CMD]
+        --start\tStarts the app
+        --build\tBuilds the app
+        `)
 }
